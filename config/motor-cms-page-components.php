@@ -55,7 +55,21 @@ return [
         'visitor-login'                 => [
             'name'            => 'VisitorLogin',
             'description'     => 'Show VisitorLogin component',
-            'view'            => 'partymeister-core::frontend.components.visitor-login',
+            'view'            => 'partymeister-core::frontend.components.visitor-login-register',
+            'route'           => 'component.visitor-logins',
+            'component_class' => 'Partymeister\Core\Components\ComponentVisitorLogins',
+            'compatibility'   => [
+
+            ],
+            'permissions'     => [
+
+            ],
+            'group'           => 'partymeister-core'
+        ],
+        'visitor-login-sceneid'                 => [
+            'name'            => 'SceneIdLogin',
+            'description'     => 'Show SceneIdLogin component',
+            'view'            => 'partymeister-core::frontend.components.visitor-login-sceneid',
             'route'           => 'component.visitor-logins',
             'component_class' => 'Partymeister\Core\Components\ComponentVisitorLogins',
             'compatibility'   => [

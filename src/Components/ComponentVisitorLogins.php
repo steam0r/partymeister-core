@@ -123,8 +123,14 @@ class ComponentVisitorLogins
      */
     public function render()
     {
+        $loginType = config('partymeister-core-visitor-registration.type');
+        $viewSuffix = "-" . $loginType;
+        if(!$loginType || $loginType == "register") {
+            $viewSuffix = "";
+        }
+        $viewName = 'motor-cms-page-components.components.' . $this->pageVersionComponent->component_name . $viewSuffix . '.view';
         return view(
-            config('motor-cms-page-components.components.' . $this->pageVersionComponent->component_name . '.view'),
+            config($viewName),
             [ 'visitorLoginForm' => $this->visitorLoginForm, 'component' => $this->component ]
         );
     }

@@ -59,6 +59,8 @@ Route::get('infodesk.json', 'Partymeister\Core\Http\Controllers\Api\LegacyContro
 Route::get('visitors.json', 'Partymeister\Core\Http\Controllers\Api\LegacyController@visitors')->name('visitors');
 Route::get('timetable.json', 'Partymeister\Core\Http\Controllers\Api\LegacyController@timetable')->name('timetable');
 
+Route::get('sceneid', 'Partymeister\Core\Http\Controllers\Api\SceneIdController@redirect')->middleware('web')->name('sceneid.redirect');
+
 // Only add the route group if you don't already have one for the given namespace
 Route::group([
     'as'         => 'component.',

@@ -20,7 +20,8 @@
     ],
     "psr-4": {
       "Partymeister\\Core\\": "src",
-      "Tests\\Partymeister\\Core\\": "tests"
+      "Tests\\Partymeister\\Core\\": "tests",
+      "SceneOrg\\SceneId\\": "sceneid"
     }
   },
   "extra": {
