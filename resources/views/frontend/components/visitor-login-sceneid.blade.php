@@ -3,7 +3,7 @@
 <div class="grid-x">
     <div class="cell small-6">
         <a href="{{ url('/sceneid') }}"
-                class="success button expanded">{{ trans('motor-backend::backend/login.sign_in') }}</a>
+                class="success button expanded" style="    background-image: url(/images/frontend/SceneID_Icon_400x64.png); background-color: black !important; background-repeat: no-repeat; background-size: contain; background-position: left; height: 100%;">&nbsp;</a>
     </div>
 </div>
 @endif
