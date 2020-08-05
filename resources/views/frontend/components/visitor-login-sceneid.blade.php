@@ -61,6 +61,32 @@
         </li>
     </ul>
 </form>
+<div class="cables" style="margin-top: 20px;">
+  <script type="text/javascript" src="{{ url('/cables/js/patch.js') }}" async></script>
+  <script>
+    document.addEventListener('CABLES.jsLoaded', function(event) {
+      CABLES.patch = new CABLES.Patch({
+        patch: CABLES.exportedPatch,
+        prefixAssetPath: "{{ url('/cables') }}/",
+        glCanvasId: 'glcanvas',
+        glCanvasResizeToWindow: false,
+        variables: {
+          "handle":"{{$visitor->name}}"
+        }
+      });
+      document.getElementById("glcanvas").addEventListener("click", function() {
+        console.log("hepp");
+        CABLES.patch.restart();
+      });
+    });
+  </script>
+  Download your custom avatar by<br/>
+  clicking on the image.<br/><br/>
+  Use it everywhere!
+  <br/>
+  <br/>
+  <canvas id="glcanvas" style="cursor:pointer;"></canvas>
+</div>
 @endif
 
 @section('view-scripts')
