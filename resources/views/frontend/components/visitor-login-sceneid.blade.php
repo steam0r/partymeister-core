@@ -80,12 +80,14 @@
       });
     });
   </script>
-  Download your custom avatar by<br/>
-  clicking on the image.<br/><br/>
-  Use it everywhere!
-  <br/>
-  <br/>
-  <canvas id="glcanvas" style="cursor:pointer;"></canvas>
+  <div class="cablestext">
+    Download your custom avatar by<br/>
+    clicking on the image.<br/><br/>
+    Use it everywhere!
+  </div>
+  <div class="cablespatch">
+    <canvas id="glcanvas" style="cursor:pointer; width: 100%;"></canvas>
+  </div>
 </div>
 @endif
 
